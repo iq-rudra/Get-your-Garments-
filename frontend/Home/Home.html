@@ -7,7 +7,7 @@
     <title>My Homepage</title>
 </head>
 <body>
-    <header>
+    <!-- <header>
         <h1>Get your germents</h1>
         <nav>
             <ul>
@@ -18,7 +18,66 @@
                 <li><a href="#contact">Contact us</a></li>
             </ul>
         </nav>
-    </header>
+    </header> -->
+
+    <!-- added header  -->
+    <header>
+        <div class="header-container">
+          <div class="left-section">
+            <div class="logo">
+              <a href="index.php">
+                <img src="logo.png" alt="Logo" class="logo-img" />
+              </a>
+            </div>
+            <nav class="categories-menu">
+              <ul>
+                <li>
+                  <a href="#">Categories</a>
+                  <ul class="submenu">
+                    <li><a href="#">Men's Clothing</a></li>
+                    <li><a href="#">Women's Clothing</a></li>
+                    <li><a href="#">Kids</a></li>
+                    <li><a href="#">Accessories</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div class="middle-section">
+            <div class="search-bar">
+              <input type="text" placeholder="Search products..." />
+              <button>Search</button>
+            </div>
+          </div>
+          <div class="right-section">
+            <nav class="menu">
+              <ul>
+                <li><a href="buyer-central.php">Buyer Central</a></li>
+                <li>
+                  <select id="currency-select">
+                    <option value="usd">USD</option>
+                    <option value="eur">EUR</option>
+                    <option value="bdt">BDT</option>
+                  </select>
+                </li>
+                <li><a href="login.php">Login</a></li>
+                <li><a href="register.php">Register</a></li>
+                <li>
+                  <a href="profile.php">
+                    <img
+                      src="profile-icon.png"
+                      alt="Profile"
+                      class="profile-icon"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+      <!-- added header end  -->
+       
     <main>
         <section id="showcase">
             <h2>Showcase Garments</h2>
@@ -69,8 +128,59 @@
             <p>Phone: <a href="tel:+1234567890">01774893925</a></p>
         </section>
     </main>
-    <footer>
+    <!-- <footer>
         <p>&copy; 2024 My Homepage. All rights reserved.</p>
+    </footer> -->
+
+    <footer>
+      <div class="footer-container">
+        <div class="footer-info">
+          <h3>What We Do</h3>
+          <p>
+            Get Your Garments is your go-to platform for sourcing quality garments
+            from Bangladesh. We connect international buyers with certified
+            manufacturers to ensure high-quality, ethical production standards. Our
+            products range from men’s, women’s, and kids' clothing to accessories
+            and more.
+          </p>
+        </div>
+        <div class="footer-socials">
+          <h3>Connect with Us</h3>
+          <ul>
+            <li>
+              <a href="#"
+                ><img src="facebook-icon.png" alt="Facebook" /> Facebook</a
+              >
+            </li>
+            <li>
+              <a href="#"><img src="twitter-icon.png" alt="Twitter" /> Twitter</a>
+            </li>
+            <li>
+              <a href="#"
+                ><img src="instagram-icon.png" alt="Instagram" /> Instagram</a
+              >
+            </li>
+            <li>
+              <a href="#"
+                ><img src="linkedin-icon.png" alt="LinkedIn" /> LinkedIn</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="privacy.php">Privacy Policy</a></li>
+            <li><a href="terms.php">Terms of Service</a></li>
+            <li><a href="faq.php">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-copyright">
+          <p>&copy; 2024 Get Your Garments. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
+    
+    
 </body>
 </html>
