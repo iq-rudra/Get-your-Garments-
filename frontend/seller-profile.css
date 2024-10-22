@@ -1,0 +1,53 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Profile Container Styles */
+.profile-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Profile Container Heading Styles */
+.profile-container h1 {
+    color: #008080; /* Eye-catching color for the main heading */
+}
+
+.profile-container h2 {
+    margin-top: 20px;
+    color: #006666; /* Darker shade for subheading */
+}
+
+/* Profile Details Styles */
+.profile-details p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* Product List Styles */
+.product-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.product-list li {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+/* Reviews Section Styles */
+.reviews-section p {
+    font-size: 16px;
+    margin: 10px 0;
+    font-style: italic; /* Italicize review text for emphasis */
+}
