@@ -11,9 +11,12 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #87ceeb; /* Sky Blue */
+    background-color: #5ab4f8; /* Soft Sky Blue */
     color: white;
     padding: 15px 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1000;
   }
   
   .left-section,
@@ -37,42 +40,83 @@ body {
     justify-content: flex-end;
   }
   
+  /* Logo Styling */
   .logo img {
-    height: 50px;
+    height: 60px;
+    transition: transform 0.3s ease;
   }
   
-  .categories-menu ul {
+  .logo img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Categories Menu Styling */
+  /* Categories Menu Styling */
+.categories-menu ul {
     list-style: none;
+   
+    gap: 20px;
   }
   
   .categories-menu ul li {
     position: relative;
-    display: inline-block;
   }
   
-  .categories-menu ul li a {
+ .categories-class{
     color: white;
     text-decoration: none;
-    font-size: 16px;
+ }
+  
+  .categories-menu ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
   }
   
+  /* Submenu initially hidden */
   .submenu {
     display: none;
     position: absolute;
+    top: 100%; /* Ensures submenu appears just below the parent */
+    left: 0;
     background-color: #f4f4f4;
     list-style: none;
     padding: 10px;
-    top: 30px;
-    left: 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
   }
   
+  /* Show submenu when hovering over parent li */
   .categories-menu ul li:hover .submenu {
     display: block;
   }
   
+  .submenu li {
+    padding: 8px 15px;
+  }
+  
   .submenu li a {
-    color: #333;
+    color: #5ab4f8; /* Set submenu font color */
     text-decoration: none;
+    display: block; /* Ensure submenu links fill the space */
+    padding: 8px 0;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+  }
+  
+  .submenu li a:hover {
+    text-decoration: underline;
+    background-color: #ececec;
+    border-radius: 3px;
+  }
+  /* Search Bar Styling */
+  .search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 500px;
   }
   
   .search-bar input {
@@ -81,6 +125,13 @@ body {
     border: none;
     font-size: 14px;
     width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    outline: none;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
   }
   
   .search-bar button {
@@ -91,12 +142,14 @@ body {
     margin-left: 5px;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
   .search-bar button:hover {
     background-color: #218838;
   }
   
+  /* Right Section Styling */
   .right-section ul {
     list-style: none;
     display: flex;
@@ -106,26 +159,50 @@ body {
   .right-section ul li a {
     color: white;
     text-decoration: none;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .right-section ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
   }
   
   .profile-icon {
     height: 40px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
   }
   
+  .profile-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Currency Select */
   #currency-select {
     padding: 5px;
     border-radius: 5px;
     border: none;
     font-size: 14px;
+    background-color: white;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
   }
   
-  /* Footer Styling */
-  .footer-container {
+  #currency-select:hover {
+    background-color: #ececec;
+  }
+/* Footer Styling */
+/* Footer Styling */
+.footer-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    background-color: #87ceeb; /* Sky Blue */
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    background-color: #5ab4f8; /* Darker background for footer */
     color: white;
-    padding: 20px 50px;
+    padding: 40px 50px;
+    gap: 20px;
   }
   
   .footer-info,
@@ -134,14 +211,30 @@ body {
     margin-bottom: 20px;
   }
   
+  .footer-info h3,
+  .footer-socials h3,
+  .footer-links h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+  }
+  
+  .footer-info p {
+    line-height: 1.8;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  
   .footer-socials ul,
   .footer-links ul {
     list-style: none;
+    padding: 0;
   }
   
   .footer-socials ul li,
   .footer-links ul li {
     margin-bottom: 10px;
+    font-size: 14px;
   }
   
   .footer-socials ul li img,
@@ -152,53 +245,49 @@ body {
   
   .footer-links ul li a,
   .footer-socials ul li a {
-    color: white;
+    color: #a8d0e6; /* Lighter color for links */
     text-decoration: none;
+    transition: color 0.3s ease;
   }
   
   .footer-links ul li a:hover,
   .footer-socials ul li a:hover {
+    color: #5ab4f8; /* Hover color */
     text-decoration: underline;
   }
   
+  /* Footer Bottom Section */
   .footer-copyright {
-    grid-column: span 3;
+    grid-column: span 3; /* Span all columns */
     text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #5ab4f8; /* Divider */
     margin-top: 20px;
+    font-size: 14px;
+    color: #a8d0e6;
   }
   
-  /* Media Queries */
+  /* Responsive Footer */
   @media only screen and (max-width: 768px) {
-    .header-container {
-      flex-direction: column;
-      text-align: center;
-      padding: 20px;
-    }
-  
-    .left-section,
-    .middle-section,
-    .right-section {
-      flex-direction: column;
-      width: 100%;
-      margin-bottom: 10px;
-    }
-  
-    .search-bar input {
-      width: 80%;
-      margin-bottom: 10px;
-    }
-  
-    .search-bar button {
-      width: 80%;
-    }
-  
     .footer-container {
-      grid-template-columns: 1fr;
+      grid-template-columns: 1fr; /* Single column layout */
       text-align: center;
       padding: 20px;
+    }
+  
+    .footer-socials ul {
+      justify-content: center;
+    }
+  
+    .footer-links ul {
+      justify-content: center;
+    }
+  
+    .footer-info, .footer-socials, .footer-links {
+      margin-bottom: 30px;
     }
   }
-  
+
 
 main {
     padding: 20px;
@@ -290,7 +379,7 @@ section {
 footer {
     text-align: center;
     padding: 10px 0;
-    background: #35424a;
+    background: #5ab4f8;
     color: white;
     position: relative;
     bottom: 0;
