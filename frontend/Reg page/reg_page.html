@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manufacturer Registration</title>
+    <link rel="stylesheet" href="reg.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Manufacturer Registration</h2>
+      <form id="manufacturerForm" onsubmit="return validateForm()">
+        <label for="companyName">Company Name</label>
+        <input
+          type="text"
+          id="companyName"
+          name="companyName"
+          placeholder="Enter company name"
+          required
+        />
+
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Enter email address"
+          required
+        />
+
+        <label for="phone">Phone Number</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          placeholder="Enter phone number"
+          required
+        />
+
+        <label for="certifications">Upload Certifications</label>
+        <small>Enter certifications (ISO, Fair Trade, etc.)</small>
+        <input
+          type="file"
+          id="certifications"
+          name="certifications[]"
+          multiple
+          required
+        />
+
+        <!-- Placeholder hint added -->
+
+        <label for="products">Upload Product Images</label>
+        <input type="file" id="products" name="products[]" multiple required />
+
+        <label for="description">Company Description</label>
+        <textarea
+          id="description"
+          name="description"
+          placeholder="Write a brief description of your company..."
+          rows="4"
+          required
+        ></textarea>
+
+        <input type="submit" value="Register" />
+      </form>
+      <div id="message"></div>
+    </div>
+
+    <script src="reg.css"></script>
+  </body>
+</html>
